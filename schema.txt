@@ -1,0 +1,40 @@
+Table Users
+- ID
+- Full Name
+- Email
+- Phone
+- Address
+- Bio
+- Photo
+- +3
+
+
++5:
+- created_at (created_date)
+- created_by
+- updated_at
+- updated_by
+- status
+
++3:
+- created_at
+- updated_at
+- status
+
+Table query statement:
+CREATE TABLE users (
+    id INT NOT NULL AUTO_INCREMENT,
+    fullname VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    phone VARCHAR(20) NULL,
+    address VARCHAR(100) NULL,
+    bio TEXT NULL,
+    photo VARCHAR(100) NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, 
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NULL,
+    status BOOLEAN DEFAULT 0 NULL,
+    PRIMARY KEY (id)
+);
+=================================
+VVI note:
+Syncronize validation on both: client side and server side
